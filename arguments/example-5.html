@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    const concatStringsWithoutSpam = function(spamWord){
+      let result = "";
+      for(let i = 1; i < arguments.length;i += 1){
+        if(arguments[i] !== spamWord){
+          result += ` ${arguments[i]}`;
+        }
+      }
+      return result;
+    }
+
+    const pharse = concatStringsWithoutSpam("xxx", "Мишка", "очень", "любит", "xxx", "и", "лимонные", "дольки");
+    console.log(pharse)
+  </script>
+</body>
+</html>

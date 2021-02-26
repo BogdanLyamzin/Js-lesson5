@@ -7,10 +7,27 @@
 <body>
     <script>
 
+        /*
         function isLegal(age) {
-            return age >= 18;
+            return (age >= 18);
+            // if(age >= 18){
+            //     return true;
+            // }
+            // else {
+            //     return false;
+            // }
         }
+        */
 
+        const isLegal = (age) => age >= 18;
+    
+        const userAge = +prompt("Введите ваш возраст")
+        if(isLegal(userAge)) {
+            console.log("Добро пожаловать!")
+        }
+        else {
+            console.log("Малолеткам вход воспрещен")
+        }
     </script>
 </body>
 </html>

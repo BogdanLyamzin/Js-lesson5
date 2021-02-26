@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <li class="menu-list"></li>
+  <li class="menu-list"></li>
+  <li class="menu-list"></li>
+  <li class="menu-list"></li>
+  <script>
+        const menuItems = document.getElementsByClassName("menu-list");
+    console.log(menuItems)
+    // menuItems.forEach(elem => console.log(elem))
+
+    const menuList = document.querySelectorAll(".menu-list");
+    menuList.forEach(elem => console.log(elem))
+    const menuListArr = Array.from(menuList)
+    menuListArr.slice(0)
+  </script>
+</body>
+</html>

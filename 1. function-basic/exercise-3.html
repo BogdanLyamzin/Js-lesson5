@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const calcSallaryPerMonth = (month, sallaryDay)=> {
+      switch(month) {
+        case "январь":
+        case "март":
+        case "май":
+        case "июль":
+        case "август":
+        case "октябрь":
+        case "декабрь":
+          return (sallaryDay * 23);
+        case "апрель":
+        case "июнь":
+        case "сентябрь":
+        case "ноябрь":
+          return (sallaryDay * 22);
+        case "февраль":
+          return (sallaryDay * 20);
+        default:
+          return false;
+      }
+    }
+
+const sallaries = [];
+const sallaryPerDay = +prompt("Введите вашу зарплату за 1 день");
+const month = prompt("Введите интересующий вас месяц");
+const sallaryPerMonth = calcSallaryPerMonth(month, sallaryPerDay);
+console.log(`Ваша зарплата за ${month} составит ${sallaryPerMonth}`);
+
+  </script>
+</body>
+</html>

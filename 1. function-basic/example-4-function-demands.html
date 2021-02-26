@@ -10,7 +10,7 @@
     <h2>Когда вы создаете функцию, нужно:</h2>
     <ul>
         <li>Определится с именем</li>
-        <li>Подумать, какие у фунции будут аргументы: что вам нужно передать
+        <li>Подумать, какие у фунции будут параметры: что вам нужно передать
             в функцию чтобы получить от нее нужный вам ответ. Это те данные, которые меняются</li>
         <li>Что она будет возвращать</li>
     </ul>
@@ -30,7 +30,29 @@
 
     </ul>
     <script>
+        const sallaries = [12300, 6700, 15000];
+        // const usdCurrency = 27.8;
 
+        const getArrInUSD = function (arr) {
+            const usdCurrency = 27.8;
+            const result = [];
+            for(const item of arr){
+                result.push(item / usdCurrency)
+            }
+            return result;
+        }
+
+        const getArrInCurrency = function (arr, currency) {
+            const result = [];
+            for(const item of arr){
+                result.push(item / currency)
+            }
+            return result;
+        }
+
+        const usdSallaries = getArrInUSD(sallaries);
+        console.log(usdSallaries);
+        const euroSallaries = getArrInCurrency(sallaries, 33.3);
     </script>
 </body>
 

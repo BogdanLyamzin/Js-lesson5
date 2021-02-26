@@ -9,19 +9,42 @@
 <body>
     <script>
 
+
+
         let userName = prompt("Введите имя");
-        // "", " ", null, "d", "fgfg"
-        while(userName && userName.length >= 2) {
+        // if(userName ) {
+        //     console.log(`Внутри круглых скобок после 
+        //     if или while пустая строка превращается в true`);
+        // }
+        // else {
+        //     console.log(`Внутри круглых скобок после 
+        //     if или while пустая строка превращается в false`);
+        // }
+        // if(userName === "" || userName === null) {
+        //     userName = prompt("Введите пожалуйста имя");
+        // }
+        // if(!userName) {
+        //     userName = prompt("Введите пожалуйста имя");
+        // }
+        
+        const isName = function(str){
+            const result = (!str || str.length < 2) ? true : false;
+            // return (!str || str.length < 2)
+            return result;
+        };
+
+        // "",  null, " ", "d", "Вика"
+        while(isName(userName)) {
             userName = prompt("Введите пожалуйста имя");
         }
 
         let userLastName = prompt("Введите фамилию");
-        while(userLastName && userLastName.length >= 2) {
+        while(isName(userLastName)) {
             userLastName = prompt("Введите пожалуйста фамилию");
         }
 
         let userMiddleName = prompt("Введите отчество");
-        while(userMiddleName && userMiddleName.length >= 2) {
+        while(isName(userMiddleName)) {
             userMiddleName = prompt("Введите пожалуйста отчество");
         }
 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    const concatStrings = function(){
+      const arr = Array.from(arguments);
+      // for(const word of arguments){
+      //   result += ` ${word}`;
+      // }
+      return arr.join(" ");
+    }
+
+    const pharse = concatStrings("Мишка", "очень", "любит", "мёд");
+    // console.log(pharse)
+  </script>
+</body>
+</html>

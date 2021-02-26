@@ -9,26 +9,29 @@
 <body>
     <script>
         const calcCircleArea = function(radius) {
-            const circleArea = 3.1516926 * radius ** 2;
+            const pi = 3.1415926;
+            const circleArea = pi * radius ** 2;
             return circleArea;
         }
 
         // console.log(calcCircleArea);
         // console.log(typeof calcCircleArea);
-        // console.log(calcCircleArea()) // JS выполнит этот набор действий
+        const circleRadius = +prompt("Введите радиус круга")
+        console.log(calcCircleArea(circleRadius)) // JS выполнит этот набор действий
         const result = calcCircleArea(10);
+        console.log(result)
          /*
         Когда вы "вызываете" функцию, происходит вот что:
         
         var radius; // создается внутренняя переменная функции, с именем radius
-        radius = 10; // в нее записывается значение, переданное в функцию, и дальше функция работает уже со своей, личной переменной, а не с внешней
+        radius = circleRadius; // в нее записывается значение, переданное в функцию, и дальше функция работает уже со своей, личной переменной, а не с внешней
         const circleArea = 3.1516926 * radius ** 2; // высчитывается площадь
         result = circleArea; // В переменную result сохраняется то, что записано в описании функции как return
         delete radius; // внутрення переменная radius уничтожается, и поэтому она недоступна после окончания работы функции
-        
+        delete circleArea;
         Резюме: то есть вместо имени функции по сути каждый раз при ее вызове подставляется код, который она хранит внутри себя
         */
-        console.log(result);
+      
 
     </script>
 </body>

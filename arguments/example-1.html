@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const calcSum = function(fistNumber, seconNumber){
+      console.log(fistNumber)
+      console.log(seconNumber)
+      console.log(arguments)
+      let sum = 0;
+      for(const num of arguments){
+        sum += num;
+      }
+      return sum;
+      // console.log(arguments.slice(2))
+    }
+
+    const result1 = calcSum(1, 2, 4);
+    /*
+    var firstNumber = 1;
+    var secondNumber = 2;
+    var arguments = [];
+    arguments[0] = 1;
+    arguments[1] = 2;
+    arguments[2] = 4;
+    */
+    // console.log(result1)
+    const result2 = calcSum(1, 2, 4, 4, 8);
+    /*
+    var firstNumber = 1;
+    var secondNumber = 2;
+    var arguments = [];
+    arguments[0] = 1;
+    arguments[1] = 2;
+    arguments[2] = 4;
+    arguments[3] = 4;
+    arguments[4] = 8;
+    */
+    // console.log(result2)
+  </script>
+</body>
+</html>
