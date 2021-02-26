@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const maxNumber = getMaxValue(3, 7, 6);
+        console.log(maxNumber);
+        const keivSquare = calcCircleArea(20);
+        console.log(keivSquare);
+        // console.log("Площадь Киева = " + keivSquare);
+        // console.log(`Площадь Киева = ${keivSquare}`);
+        // Function Expression
+        const calcCircleArea = function (radius) { // объявляем аргументы функции
+            const circleArea = 3.1516926 * (radius ** 2);
+            return circleArea;
+        };
+
+        // Function Declaration
+        function getMaxValue(value1, value2, value3) {
+
+            // return (value1>value2 && value1>value3) ? value1 : ((value2>value1 && value2>value3) ? value2 : value3);
+            if (value1 > value2 && value1 > value3) {
+                return value1;
+            }
+            else if (value2 > value1 && value2 > value3) {
+                return value2;
+            }
+            else {
+                return value3;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

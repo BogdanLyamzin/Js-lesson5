@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Добро пожаловать!</h2>
+    <script src="../2.%20fuction-expression-function-declaration/functions.js"></script>
+    <script>
+        // "Объявляем", то есть создаем функцию
+        const calcCircleArea = function(radius) { // объявляем аргументы функции
+            const circleArea = 3.1516926 * (radius ** 2);
+            return circleArea;
+        };
+
+        const planet1Radius = prompt("Введите радиус первой планеты");
+        const planet1Square = calcCircleArea(planet1Radius); //  вызываем ее справа от знака '=', передавая ей значение. В результате в переменную 'result' будет сохранено посчитанное значение
+        // console.log(planet1Square); // выводим результат на экран
+        const planet2Radius = prompt("Введите радиус второй планеты");
+        const planet2Square = calcCircleArea(planet2Radius); //  вызываем ее справа от знака '=', передавая ей значение. В результате в переменную 'result' будет сохранено посчитанное значение
+        // console.log(planet2Square); // выводим результат на экран
+        if(planet1Square > planet2Square) {
+            console.log("Планета 1 больше планеты 2");
+        }
+        else {
+            console.log("Планета 2 больше планеты 1");
+        }
+        // console.log(calcCircleArea(15));
+    </script>
+</body>
+
+</html>

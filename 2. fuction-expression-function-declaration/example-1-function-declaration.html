@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        let a= +prompt("enter first number");
+        let b= +prompt("enter second number");
+        let c= +prompt("enter third number");
+        let maxvalue = getMaxValue(a, b, c);
+        console.log(maxvalue);
+
+        function getMaxValue(value1, value2, value3) {
+
+            // return (value1>value2 && value1>value3) ? value1 : ((value2>value1 && value2>value3) ? value2 : value3);
+            if (value1>value2 && value1>value3){
+                return value1;
+            }
+            else if(value2>value1 && value2>value3){
+                return value2;
+            }
+            else{
+                return value3;
+            }
+        }
+</script>
+</body>
+</html>
